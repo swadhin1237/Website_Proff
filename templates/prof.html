@@ -75,7 +75,7 @@
         padding: 20px;
       "
     >
-      {% for i in range(97) %}
+      {% for proff in proffs %}
       <div class="card" style="width: 16rem; margin-top: 20px">
         <img
           src="https://thumbs.dreamstime.com/b/old-man-faceless-glasses-profile-cartoon-vector-illustration-graphic-design-man-faceless-profile-cartoon-140070490.jpg"
@@ -83,8 +83,10 @@
           alt="prof"
         />
         <div class="card-body">
-          <h5 class="card-title">Dr Asoka Mitra</h5>
+          <h5 class="card-title"><a href="{{proff[1]}}">{{proff[0]}}</a></h5>
+          <p class="card-text">Website URL - <a href="{{proff[1]}}">{{proff[1]}}</a></p>
         </div>
+        
       </div>
       {% endfor %}
     </div>
